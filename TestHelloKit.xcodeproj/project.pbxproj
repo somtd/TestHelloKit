@@ -18,7 +18,10 @@
 		5AB452A61764A76F00C42463 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AB452A51764A76F00C42463 /* Default-568h@2x.png */; };
 		5AB452A91764A76F00C42463 /* HKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB452A81764A76F00C42463 /* HKViewController.m */; };
 		5AB452AC1764A76F00C42463 /* HKViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AB452AA1764A76F00C42463 /* HKViewController.xib */; };
-		5AB452B31764A7BA00C42463 /* HelloKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AB452B21764A7BA00C42463 /* HelloKit.framework */; };
+		5AD0EB3E176D63D6005A1B0F /* NSBundle+HelloKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD0EB3B176D63D6005A1B0F /* NSBundle+HelloKit.m */; };
+		5AD0EB3F176D63D6005A1B0F /* UIImage+HelloKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD0EB3D176D63D6005A1B0F /* UIImage+HelloKit.m */; };
+		5AD0EB42176D6449005A1B0F /* HelloKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5AD0EB40176D6449005A1B0F /* HelloKit.bundle */; };
+		5AD0EB43176D6449005A1B0F /* HelloKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD0EB41176D6449005A1B0F /* HelloKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,7 +41,12 @@
 		5AB452A71764A76F00C42463 /* HKViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HKViewController.h; sourceTree = "<group>"; };
 		5AB452A81764A76F00C42463 /* HKViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HKViewController.m; sourceTree = "<group>"; };
 		5AB452AB1764A76F00C42463 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/HKViewController.xib; sourceTree = "<group>"; };
-		5AB452B21764A7BA00C42463 /* HelloKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HelloKit.framework; path = TestHelloKit/HelloKit.framework; sourceTree = "<group>"; };
+		5AD0EB3A176D63D6005A1B0F /* NSBundle+HelloKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+HelloKit.h"; sourceTree = "<group>"; };
+		5AD0EB3B176D63D6005A1B0F /* NSBundle+HelloKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+HelloKit.m"; sourceTree = "<group>"; };
+		5AD0EB3C176D63D6005A1B0F /* UIImage+HelloKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+HelloKit.h"; sourceTree = "<group>"; };
+		5AD0EB3D176D63D6005A1B0F /* UIImage+HelloKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+HelloKit.m"; sourceTree = "<group>"; };
+		5AD0EB40176D6449005A1B0F /* HelloKit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = HelloKit.bundle; path = TestHelloKit/HelloKit.bundle; sourceTree = "<group>"; };
+		5AD0EB41176D6449005A1B0F /* HelloKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HelloKit.framework; path = TestHelloKit/HelloKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,10 +54,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5AB452B31764A7BA00C42463 /* HelloKit.framework in Frameworks */,
 				5AB452901764A76F00C42463 /* UIKit.framework in Frameworks */,
 				5AB452921764A76F00C42463 /* Foundation.framework in Frameworks */,
 				5AB452941764A76F00C42463 /* CoreGraphics.framework in Frameworks */,
+				5AD0EB43176D6449005A1B0F /* HelloKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,7 +67,8 @@
 		5AB452831764A76F00C42463 = {
 			isa = PBXGroup;
 			children = (
-				5AB452B21764A7BA00C42463 /* HelloKit.framework */,
+				5AD0EB40176D6449005A1B0F /* HelloKit.bundle */,
+				5AD0EB41176D6449005A1B0F /* HelloKit.framework */,
 				5AB452951764A76F00C42463 /* TestHelloKit */,
 				5AB4528E1764A76F00C42463 /* Frameworks */,
 				5AB4528D1764A76F00C42463 /* Products */,
@@ -87,6 +96,7 @@
 		5AB452951764A76F00C42463 /* TestHelloKit */ = {
 			isa = PBXGroup;
 			children = (
+				5AD0EB39176D63D6005A1B0F /* Util */,
 				5AB4529E1764A76F00C42463 /* HKAppDelegate.h */,
 				5AB4529F1764A76F00C42463 /* HKAppDelegate.m */,
 				5AB452A71764A76F00C42463 /* HKViewController.h */,
@@ -109,6 +119,17 @@
 				5AB452A51764A76F00C42463 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5AD0EB39176D63D6005A1B0F /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				5AD0EB3A176D63D6005A1B0F /* NSBundle+HelloKit.h */,
+				5AD0EB3B176D63D6005A1B0F /* NSBundle+HelloKit.m */,
+				5AD0EB3C176D63D6005A1B0F /* UIImage+HelloKit.h */,
+				5AD0EB3D176D63D6005A1B0F /* UIImage+HelloKit.m */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +189,7 @@
 				5AB452A41764A76F00C42463 /* Default@2x.png in Resources */,
 				5AB452A61764A76F00C42463 /* Default-568h@2x.png in Resources */,
 				5AB452AC1764A76F00C42463 /* HKViewController.xib in Resources */,
+				5AD0EB42176D6449005A1B0F /* HelloKit.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,6 +203,8 @@
 				5AB4529C1764A76F00C42463 /* main.m in Sources */,
 				5AB452A01764A76F00C42463 /* HKAppDelegate.m in Sources */,
 				5AB452A91764A76F00C42463 /* HKViewController.m in Sources */,
+				5AD0EB3E176D63D6005A1B0F /* NSBundle+HelloKit.m in Sources */,
+				5AD0EB3F176D63D6005A1B0F /* UIImage+HelloKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +335,7 @@
 				5AB452B11764A76F00C42463 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
